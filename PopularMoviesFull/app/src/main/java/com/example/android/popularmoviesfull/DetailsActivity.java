@@ -38,7 +38,10 @@ public class DetailsActivity extends AppCompatActivity {
 
         int resID = getResources().getIdentifier(movie.getPosterPath() , "drawable", getPackageName());
         Drawable drawable = getResources().getDrawable(resID );
+
+
         mDetailsPoster.setImageDrawable(drawable );
+
         mDetailsTitle.setText(movie.getTitle());
         mDetailsReleaseDate.setText(movie.getReleaseDate());
         mDetailsRating.setText(movie.getRating());
