@@ -37,27 +37,21 @@ public class Movie {
     public String getTitle() {
         return mTitle;
     }
-
     public int getId() {
 	return mId;
     }
-
     public String getRawPosterPath()  {
 	return mPosterPath;
     }
-
     public String getPosterPath() {
         return IMAGE_URL_BASE + IMAGE_URL_SIZE + mPosterPath;
     }
-
     public String getSynopsis() {
         return mSynopsis;
     }
-
     public String getRating() {
         return mRating;
     }
-
     public String getReleaseDate() {
         return mReleaseDate;
     }
