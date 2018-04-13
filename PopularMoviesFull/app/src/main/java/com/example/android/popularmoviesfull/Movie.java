@@ -11,7 +11,6 @@ public class Movie {
      * Poti include toate detaliile din activity_details.xml
      * Nume, id, calea poster-ului, rating, data aparitiei.
      */
-    private int mId;
     private String mTitle;
     private String mPosterPath;
     private String mSynopsis;
@@ -24,9 +23,8 @@ public class Movie {
      * El primeste ca argumente variabile de care ai nevoie ca sa creezi obiectul tau.
      * Valorile variabilelor sunt preluate de variabilele membru.
      */
-    public Movie(String title, int id, String path, String synopsis, String rating, String releaseDate) {
+    public Movie(String title, String path, String synopsis, String rating, String releaseDate) {
         mTitle = title;
-        mId = id;
         mPosterPath = path;
         mSynopsis = synopsis;
         mRating = rating;
@@ -40,10 +38,6 @@ public class Movie {
      */
     public String getTitle() {
         return mTitle;
-    }
-
-    public int getId() {
-	return mId;
     }
 
     public String getRawPosterPath()  {
