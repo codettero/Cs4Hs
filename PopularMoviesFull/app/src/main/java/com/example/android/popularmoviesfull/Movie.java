@@ -1,4 +1,4 @@
-package com.example.android.popularmovies;
+package com.example.android.popularmoviesfull;
 
 /**
  * Created by Codette on 13.04.2018.
@@ -12,6 +12,7 @@ public class Movie {
      * Nume, id, calea poster-ului, rating, data aparitiei.
      */
     private int mId;
+    private String mTitle;
     private String mPosterPath;
     private String mSynopsis;
     private String mRating;
@@ -23,11 +24,11 @@ public class Movie {
      * El primeste ca argumente variabile de care ai nevoie ca sa creezi obiectul tau.
      * Valorile variabilelor sunt preluate de variabilele membru.
      */
-    public Movie(String title, int id, String path, String synopis, String rating, String releaseDate) {
+    public Movie(String title, int id, String path, String synopsis, String rating, String releaseDate) {
         mTitle = title;
         mId = id;
         mPosterPath = path;
-        mSynopsis = synopis;
+        mSynopsis = synopsis;
         mRating = rating;
         mReleaseDate = releaseDate;
     }
@@ -50,7 +51,7 @@ public class Movie {
     }
 
     public String getPosterPath() {
-        return IMAGE_URL_BASE + IMAGE_URL_SIZE + mPosterPath;
+        return mPosterPath;
     }
 
     public String getSynopsis() {
