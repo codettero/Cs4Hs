@@ -12,10 +12,7 @@ public class Movie {
      * Nume, calea poster-ului, descrierea, rating, data aparitiei.
      */
     private String mTitle;
-    private String mPosterPath;
-    private String mSynopsis;
-    private String mRating;
-    private String mReleaseDate;
+
 
     /*
      * TODO 2
@@ -25,10 +22,7 @@ public class Movie {
      */
     public Movie(String title, String path, String synopsis, String rating, String releaseDate) {
         mTitle = title;
-        mPosterPath = path;
-        mSynopsis = synopsis;
-        mRating = rating;
-        mReleaseDate = releaseDate;
+
     }
 
     /*
@@ -40,23 +34,4 @@ public class Movie {
         return mTitle;
     }
 
-    public String getRawPosterPath()  {
-	return mPosterPath;
-    }
-
-    public String getPosterPath() {
-        return mPosterPath;
-    }
-
-    public String getSynopsis() {
-        return mSynopsis;
-    }
-
-    public String getRating() {
-        return mRating;
-    }
-
-    public String getReleaseDate() {
-        return mReleaseDate;
-    }
 }

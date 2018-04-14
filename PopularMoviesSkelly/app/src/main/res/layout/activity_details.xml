@@ -8,7 +8,6 @@
 
     <!-- TODO 1 Vrem să adăugăm un id acestui LinearLayout -->
     <LinearLayout
-        android:id="@+id/details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -18,88 +17,50 @@
         ii) Setaţi orientarea ca fiind orizontală
         iii)Setaţi lungimea şi înălţimea la fel ca layout-ul de mai sus -->
 
-        <LinearLayout
-            android:id="@+id/base_details"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
 
             <!-- TODO 3
             i) Adăugaţi un id imaginii
             ii) Setaţi şi sursa imaginii -->
             <ImageView
-                android:id="@+id/details_poster_iv"
                 android:layout_width="0dp"
                 android:layout_height="300dp"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                tools:src="@drawable/ic_launcher_background" />
+                />
 
             <!-- TODO 4 Adăugaţi un id  -->
             <RelativeLayout
-                android:id="@+id/title_rating_date"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
 
                 <!-- TODO 4.1 Adăugaţi un TextView pentru titlu cu specificaţiile necesare: id, înălţime, lăţime -->
-                <TextView
-                    android:id="@+id/details_title_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:hint="TITLE OF THE MOVIE" />
+
 
                 <!-- TODO 4.2 Adăugaţi un ImageView cu specificaţiile necesare: id, sursă, înălţime, lăţime,
                 setaţi imaginea dedesuptul TextView-ului creat anterior(iconiţa e imaginea aferentă
                 raitingului)-->
-                <ImageView
-                    android:id="@+id/details_rating_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/details_title_tv"
-                    tools:src="@drawable/ic_star_black_24dp" />
+
 
                 <!-- TODO 4.3 Adăugaţi un TextView pentru detaliile raitingului cu specificaţiile necesare:
                 id, înălţime, lăţime,lăţime, setaţi imaginea dedesuptul TextView-ului creat anterior
                 şi la dreapta imaginii create anterior -->
-                <TextView
-                    android:id="@+id/details_rating_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/details_rating_icon"
-                    tools:hint="5.6" />
 
                 <!-- TODO 4.4 Adăugaţi un TextView pentru data apariţiei cu specificaţiile necesare: id, înălţime,
                 lăţime, textul sa fie în partea dreaptă jos a părintelui  -->
-                <TextView
-                    android:id="@+id/details_date_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    tools:hint="2018-05-02" />
+
 
             </RelativeLayout>
 
 
-        </LinearLayout>
-
         <!-- TODO 5.1 Adăugaţi un TextView pentru labelul rezumatului cu specificaţiile necesare:
         id, înălţime, lăţime, unde textul va fi preluat din containărul "string" -->
-        <TextView
-            android:id="@+id/details_synopsis_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/activity_details_synopsis_label" />
 
         <!-- TODO 5.2 Adăugaţi un TextView pentru rezumatul propriu-zis cu specificaţiile necesare:
         id, înălţime, lăţime -->
-        <TextView
-            android:id="@+id/details_synopsis_tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+
 
     </LinearLayout>
 </ScrollView>

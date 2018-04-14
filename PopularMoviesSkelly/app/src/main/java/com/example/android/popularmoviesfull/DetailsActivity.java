@@ -16,10 +16,7 @@ public class DetailsActivity extends AppCompatActivity {
      * Text: titlu, rating, data aparitiei, descrierea.
      */
     public ImageView mDetailsPoster;
-    public TextView mDetailsTitle;
-    public TextView mDetailsRating;
-    public TextView mDetailsReleaseDate;
-    public TextView mDetailsSynopsis;
+
     
     /*
      * TODO 2
@@ -42,10 +39,7 @@ public class DetailsActivity extends AppCompatActivity {
          * ii) Pune rezultatele in variabilele membru corespunzatoare.
          */
         mDetailsPoster = findViewById(R.id.details_poster_iv);
-        mDetailsTitle = findViewById(R.id.details_title_tv);
-        mDetailsRating = findViewById(R.id.details_rating_tv);
-        mDetailsReleaseDate = findViewById(R.id.details_date_tv);
-        mDetailsSynopsis = findViewById(R.id.details_synopsis_tv);
+
         
         /* TODO 2.2
          * Creeaza niste obiecte de tip Movie.
@@ -81,7 +75,7 @@ public class DetailsActivity extends AppCompatActivity {
          * Apeleaza metoda setImageDrawable(drawable) pentru obiectul
          * tau de tip ImageView
          */
-        mDetailsPoster.setImageDrawable(drawable );
+
         
         /*
          * TODO 2.4
@@ -90,9 +84,7 @@ public class DetailsActivity extends AppCompatActivity {
          * Ca parametru, foloseste atributele din obiectele de tip Movie.
          */
         mDetailsTitle.setText(movie.getTitle());
-        mDetailsReleaseDate.setText(movie.getReleaseDate());
-        mDetailsRating.setText(movie.getRating());
-        mDetailsSynopsis.setText(movie.getSynopsis());
+
 
     }
 
