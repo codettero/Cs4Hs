@@ -8,6 +8,7 @@
     
     <!-- TODO 1 Vrem să adăugăm un id acestui LinearLayout -->
     <LinearLayout
+        android:id="@+id/questions_linear_layout"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
@@ -215,15 +216,13 @@
             android:onClick="submit">
         </Button>
         
-        <!-- TODO 12 Adăugaţi un LinearLayout pentru Rezultate
-        i) Setaţi orientarea ca fiind orizontala
-        ii) Setaţi lungimea şi înălţimea ca fiind standard -->
+        <!-- TODO 12 Adăugaţi un id pentru acest LinearLayout pentru Rezultate -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             
-            <!-- TODO 13 Adaugati raspunsurile corecte
+            <!-- TODO 13 Adaugati un textview pentru raspunsurile corecte
             i) Setaţi lungimea ca cea a parintelui şi înălţimea ca fiind standard
             ii) Aliniati si aranjati textul in layout
             iii) Setati marimea si culoarea textului -->
@@ -239,7 +238,7 @@
                 android:text=""
                 />
             
-            <!-- TODO 14 Adaugati raspunsurile gresite
+            <!-- TODO 14 Adaugati un textview pentru raspunsurile gresite
             i) Setaţi lungimea ca cea a parintelui şi înălţimea ca fiind standard
             ii) Aliniati si aranjati textul in layout
             iii) Setati marimea si culoarea textului -->
