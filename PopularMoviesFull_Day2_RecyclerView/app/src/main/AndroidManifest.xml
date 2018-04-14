@@ -14,8 +14,8 @@
         </activity>
         
         <!-- TODO Creeaza activitatea cu numele ".ListActivity"
-                Muta tot tag-ul intent-filter din DetailsActivity
-                in ListActivity -->
+        Muta tot tag-ul intent-filter din DetailsActivity
+        in ListActivity - Reminder: asa se trece dintr-o activitate in alta -->
         <activity android:name=".ListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
