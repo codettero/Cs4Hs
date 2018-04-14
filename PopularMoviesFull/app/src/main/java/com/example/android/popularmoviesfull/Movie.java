@@ -9,7 +9,7 @@ public class Movie {
      * TODO 1
      * Definesteste variabilele membru ale acestei clase.
      * Poti include toate detaliile din activity_details.xml
-     * Nume, id, calea poster-ului, rating, data aparitiei.
+     * Nume, calea poster-ului, descrierea, rating, data aparitiei.
      */
     private String mTitle;
     private String mPosterPath;
