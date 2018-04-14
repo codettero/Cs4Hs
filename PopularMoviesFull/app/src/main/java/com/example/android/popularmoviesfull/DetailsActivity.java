@@ -20,7 +20,7 @@ public class DetailsActivity extends AppCompatActivity {
     public TextView mDetailsRating;
     public TextView mDetailsReleaseDate;
     public TextView mDetailsSynopsis;
-    
+
     /*
      * TODO 2
      * Metoda onCreate se apeleaza automat la lansarea in executie a activitatii.
@@ -32,7 +32,7 @@ public class DetailsActivity extends AppCompatActivity {
         /* se seteaza content-ul actual */
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-        
+
         /*
          * TODO 2.1
          * Trebuie sa obtii view-urile, ca apoi sa le setezi cu ce valori vrei tu.
@@ -46,7 +46,7 @@ public class DetailsActivity extends AppCompatActivity {
         mDetailsRating = findViewById(R.id.details_rating_tv);
         mDetailsReleaseDate = findViewById(R.id.details_date_tv);
         mDetailsSynopsis = findViewById(R.id.details_synopsis_tv);
-        
+
         /* TODO 2.2
          * Creeaza niste obiecte de tip Movie.
          * Da ca parametru string-urile corespunzatoare fiecarui membru
@@ -66,14 +66,14 @@ public class DetailsActivity extends AppCompatActivity {
          * sa il stergi pe cel dinainte si fara sa faci prea multe modificari.
          *
          * Hint: Salveaza ce film vrei sa folosesti dintre cele instantiate mai
-         * sus intr-o noua variabila si foloseste-o pe aceea in toate setarile. 
+         * sus intr-o noua variabila si foloseste-o pe aceea in toate setarile.
          */
         Movie movie = film2;
         /*
          * obtine obiectul Drawable necesar pentru poster
          */
-        int resID = getResources().getIdentifier(movie.getPosterPath() , "drawable", getPackageName());
-        Drawable drawable = getResources().getDrawable(resID );
+        int resID = getResources().getIdentifier(movie.getPosterPath(), "drawable", getPackageName());
+        Drawable drawable = getResources().getDrawable(resID);
 
         /*
          * TODO 2.3
@@ -81,8 +81,8 @@ public class DetailsActivity extends AppCompatActivity {
          * Apeleaza metoda setImageDrawable(drawable) pentru obiectul
          * tau de tip ImageView
          */
-        mDetailsPoster.setImageDrawable(drawable );
-        
+        mDetailsPoster.setImageDrawable(drawable);
+
         /*
          * TODO 2.4
          * Seteaza text view-urile
