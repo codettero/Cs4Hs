@@ -1,28 +1,21 @@
 package com.example.android.popularmoviesfull;
 
+import android.content.pm.PackageManager;
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by Codette on 13.04.2018.
  */
 
-public class Movie {
-    /* 
-     * TODO 1
-     * Definesteste variabilele membru ale acestei clase.
-     * Poti include toate detaliile din activity_details.xml
-     * Nume, calea poster-ului, descrierea, rating, data aparitiei.
-     */
+public class Movie implements Parcelable{
+
     private String mTitle;
     private String mPosterPath;
     private String mSynopsis;
     private String mRating;
     private String mReleaseDate;
 
-    /*
-     * TODO 2
-     * Defineste constructorul acestei clase.
-     * El primeste ca argumente variabile de care ai nevoie ca sa creezi obiectul tau.
-     * Valorile variabilelor sunt preluate de variabilele membru.
-     */
     public Movie(String title, String path, String synopsis, String rating, String releaseDate) {
         mTitle = title;
         mPosterPath = path;
@@ -31,17 +24,28 @@ public class Movie {
         mReleaseDate = releaseDate;
     }
 
-    /*
-     * TODO 3
-     * Variabilele membru ale clasei sunt private.
-     * Pentru a le putea accesa valoarea, fa getteri pentru ele.
-     */
-    public String getTitle() {
-        return mTitle;
+    protected Movie(Parcel in) {
+        mTitle = in.readString();
+        mPosterPath = in.readString();
+        mSynopsis = in.readString();
+        mRating = in.readString();
+        mReleaseDate = in.readString();
     }
 
-    public String getRawPosterPath()  {
-	return mPosterPath;
+    public static final Creator<Movie> CREATOR = new Creator<Movie>() {
+        @Override
+        public Movie createFromParcel(Parcel in) {
+            return new Movie(in);
+        }
+
+        @Override
+        public Movie[] newArray(int size) {
+            return new Movie[size];
+        }
+    };
+
+    public String getTitle() {
+        return mTitle;
     }
 
     public String getPosterPath() {
@@ -58,5 +62,19 @@ public class Movie {
 
     public String getReleaseDate() {
         return mReleaseDate;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(mTitle);
+        parcel.writeString(mPosterPath);
+        parcel.writeString(mSynopsis);
+        parcel.writeString(mRating);
+        parcel.writeString(mReleaseDate);
     }
 }

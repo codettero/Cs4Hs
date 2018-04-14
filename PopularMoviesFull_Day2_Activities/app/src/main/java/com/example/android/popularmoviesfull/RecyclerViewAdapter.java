@@ -16,10 +16,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private Context mContext;
     private List<Movie> mMovieList;
+    final private ListItemClickListener mListItemClickListener;
 
-    public RecyclerViewAdapter(Context context, List<Movie> movies){
+    public RecyclerViewAdapter(Context context, List<Movie> movies, ListItemClickListener listItemClickListener){
         mContext = context;
         mMovieList = movies;
+        mListItemClickListener = listItemClickListener;
     }
 
     @Override
@@ -41,13 +43,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return mMovieList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    // TODO 1: Cream o metoda getItem care ia ca parametru un numar intreg si returneaza
+    // obiectul Movie de pe pozitia specificata in parametrii din lista de filme
+    public Movie getItem(int id){ return mMovieList.get(id);}
+
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         private ImageView poster;
 
         public ViewHolder(View itemView) {
             super(itemView);
             poster = itemView.findViewById(R.id.holder_poster_iv);
+            itemView.setOnClickListener(this);
         }
 
         public void setPoster(String posterPathParam) {
@@ -56,5 +63,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             poster.setImageDrawable(drawable);
         }
+
+        @Override
+        public void onClick(View view) {
+            int clickedPosition = getAdapterPosition();
+            mListItemClickListener.onListItemClick(clickedPosition);
+        }
+    }
+
+    public interface ListItemClickListener{
+        void onListItemClick(int clickedItemIndex);
     }
 }
