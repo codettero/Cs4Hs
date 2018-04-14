@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.testyourgeneralknowledge.MainActivity">
-
+    
+    <!-- TODO 1 Vrem să adăugăm un id acestui LinearLayout -->
     <LinearLayout
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
@@ -13,13 +14,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
+        
+        <!-- TODO 2 Adăugaţi un LinearLayout pentru prima intrebare
+        i) Setaţi orientarea ca fiind vertitală
+        ii) Setaţi lungimea şi înălţimea ca fiind standard -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginBottom="16dp">
-
+            
+            <!-- TODO 3 Adaugati textul de la prima intrebare
+            i) Setaţi lungimea şi înălţimea ca fiind standard
+            ii) Setati marimea si culoarea textului -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -28,6 +35,12 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginBottom="8dp"
                 />
+            
+            <!-- TODO 4 Adaugati variantele de raspuns de la prima intrebare
+            Pentru fiecare din ele veti face un checkbox in care veti avea urmatoarele:
+            i) Setaţi lungimea şi înălţimea ca fiind standard
+            ii) Setati un id variantei
+            iii) Setati marimea si culoarea textului de pe checkbox -->
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -72,13 +85,19 @@
                 android:checked="false"
                 />
         </LinearLayout>
-
+        
+        <!-- TODO 5 Adăugaţi un LinearLayout pentru a doua intrebare
+        i) Setaţi orientarea ca fiind vertitală
+        ii) Setaţi lungimea şi înălţimea ca fiind standard -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginBottom="16dp">
-
+            
+            <!-- TODO 6 Adaugati textul de la a doua intrebare
+            i) Setaţi lungimea şi înălţimea ca fiind standard
+            ii) Setati marimea si culoarea textului -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -87,6 +106,16 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginBottom="8dp"
                 />
+             <!-- TODO 7 Adaugati variantele de raspuns de la prima intrebare
+            Pentru acest lucru veti face un RadioGroup care va contine toate variantele
+            ca RadioButton.
+            Pentru RadioButton:
+            i) Setaţi lungimea şi înălţimea ca fiind standard
+            ii) Setati un id grupului de variante
+            Pentru fiecare RadioButton(varianta):
+            i) Setaţi lungimea şi înălţimea ca fiind standard
+            ii) Setati un id variantei
+            iii) Setati marimea si culoarea textului de pe checkbox -->
             <RadioGroup
                 android:id="@+id/domnii"
                 android:layout_width="wrap_content"
@@ -134,14 +163,20 @@
                     />
             </RadioGroup>
         </LinearLayout>
-
+        
+        <!-- TODO 8 Adăugaţi un LinearLayout pentru a treia intrebare
+        i) Setaţi orientarea ca fiind vertitală
+        ii) Setaţi lungimea şi înălţimea ca fiind standard -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginBottom="16dp"
             android:focusableInTouchMode="true">
-
+            
+            <!-- TODO 9 Adaugati textul de la a treia intrebare
+            i) Setaţi lungimea şi înălţimea ca fiind standard
+            ii) Setati marimea si culoarea textului -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -149,7 +184,12 @@
                 android:textSize="20sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginBottom="8dp"/>
-
+            
+            <!-- TODO 10 Adaugati casuta in care se completeaza a treia intrebare
+            Aceasta e de tip ËditText si veti avea:
+            i) Setati un Id casutei
+            ii) Setaţi lungimea şi înălţimea ca fiind standard
+            iii) Setati marimea si culoarea textului -->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -158,7 +198,10 @@
                 />
 
         </LinearLayout>
-
+        
+        <!-- TODO 11 Adăugaţi un Button de Submit
+        i) Setaţi textul, culoarea si backgroundul butonului
+        ii) Setaţi atributul onClick sa fie "submit" -->
         <Button
             android:id="@+id/submit"
             android:layout_width="match_parent"
@@ -171,12 +214,19 @@
             android:background="@color/colorPrimary"
             android:onClick="submit">
         </Button>
-
+        
+        <!-- TODO 12 Adăugaţi un LinearLayout pentru Rezultate
+        i) Setaţi orientarea ca fiind orizontala
+        ii) Setaţi lungimea şi înălţimea ca fiind standard -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
+            
+            <!-- TODO 13 Adaugati raspunsurile corecte
+            i) Setaţi lungimea ca cea a parintelui şi înălţimea ca fiind standard
+            ii) Aliniati si aranjati textul in layout
+            iii) Setati marimea si culoarea textului -->
             <TextView
                 android:id="@+id/correctResults"
                 android:textAlignment="center"
@@ -188,7 +238,11 @@
                 android:layout_weight="1"
                 android:text=""
                 />
-
+            
+            <!-- TODO 14 Adaugati raspunsurile gresite
+            i) Setaţi lungimea ca cea a parintelui şi înălţimea ca fiind standard
+            ii) Aliniati si aranjati textul in layout
+            iii) Setati marimea si culoarea textului -->
             <TextView
                 android:id="@+id/wrongResults"
                 android:textAlignment="center"
