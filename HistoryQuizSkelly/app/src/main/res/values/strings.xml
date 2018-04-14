@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Test your General Knowledge</string>
+    <string name="Question1">"1. Ce state au facut parte din grupul numit Aliatii in WW2"</string>
+    <string name="Question1_Option1">Franta</string>
+    <string name="Question1_Option2">Polonia</string>
+    <string name="Question1_Option3">Germania</string>
+    <string name="Question1_Option4">Regatul Unit al Marii Britanii si Irlandei de Nord</string>
+    <string name="Question2">"2. Cate domnii a avut Vlad Tepes?"</string>
+    <string name="Question2_Option1">3</string>
+    <string name="Question2_Option2">2</string>
+    <string name="Question2_Option3">5</string>
+    <string name="Question2_Option4">4</string>
+    <string name="Question3">"3. Razboaiele daco-romane au avut loc in timpul domniei imparatului roman pe nume... "</string>
+</resources>
