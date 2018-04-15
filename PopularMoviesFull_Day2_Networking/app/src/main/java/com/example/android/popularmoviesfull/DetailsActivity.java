@@ -7,7 +7,12 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 public class DetailsActivity extends AppCompatActivity {
+    String IMAGE_URL_BASE = "http://image.tmdb.org/t/p/";
+    String IMAGE_URL_SIZE = "w185/";
+
     public ImageView mDetailsPoster;
     public TextView mDetailsTitle;
     public TextView mDetailsRating;
@@ -34,15 +39,12 @@ public class DetailsActivity extends AppCompatActivity {
         Movie film3 = new Movie("Black Mirror", "image_film_three",
                 "zxcvbnmzxcvbnm", "5.3", "10/11/2016");
 
-        // TODO 3.1: Captam intent-ul trimis de ListActivity care contine filmul ce trebuie afisat
+        Intent intent = getIntent();
+        Movie movie = intent.getParcelableExtra("selectedMovie");
 
-        // TODO 3.2: Extragem filmul din intent folosind getParcelableExtra()
-
-
-        int resID = getResources().getIdentifier(movie.getPosterPath(), "drawable", getPackageName());
-        Drawable drawable = getResources().getDrawable(resID);
-
-        mDetailsPoster.setImageDrawable(drawable);
+        Picasso.with(this)
+                .load(IMAGE_URL_BASE + IMAGE_URL_SIZE + movie.getPosterPath())
+                .into(mDetailsPoster);
 
         mDetailsTitle.setText(movie.getTitle());
         mDetailsReleaseDate.setText(movie.getReleaseDate());
