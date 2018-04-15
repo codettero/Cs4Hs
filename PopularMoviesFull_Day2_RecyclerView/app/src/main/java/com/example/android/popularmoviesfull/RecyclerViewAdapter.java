@@ -78,7 +78,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public void setPoster(String posterPathParam) {
             int resID = mContext.getResources().getIdentifier(posterPathParam, "drawable", mContext.getPackageName());
             Drawable drawable = mContext.getResources().getDrawable(resID);
-            /* TODO 6: seteaza imaginea poster-ului cu setImageDrawable(draweble) */
+            /* TODO 6: seteaza imaginea poster-ului cu setImageDrawable(drawable) */
             poster.setImageDrawable(drawable);
         }
     }
