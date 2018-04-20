@@ -105,6 +105,7 @@
         <!-- TODO 6.1. Setați id-ul la 'details_synopsis_tv'-->
         <!-- TODO 6.2. Setați width-ul să "match_parent" -->
         <!-- TODO 6.3. Setați height să "wrap_content" -->
+        <!-- TODO 6.4. Adăugați drept text, detaliile despre film, pe care le luăm din container-ul din string.-->
 
 
     </LinearLayout>
