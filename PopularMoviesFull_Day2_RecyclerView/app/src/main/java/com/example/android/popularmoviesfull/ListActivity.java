@@ -27,7 +27,7 @@ public class ListActivity extends AppCompatActivity {
     
     /*
      * Reminder: Metoda onCreate este apelata automat la lansarea activitatii.
-     * TODO 2 Urmareste TODO-urile din interiorul metodei
+     * OVERVIEW ON CREATE
      * i) Obtine RecyclerView cu findViewById
      * ii) Fa o lista de filme
      * iii) Afiseaz-o cu recycler view
@@ -68,18 +68,11 @@ public class ListActivity extends AppCompatActivity {
             noOfColumns = 2;
         return noOfColumns;
     }
-    
-    /* TODO 2.2 Creeaza o lista de filme simple
-     * Adauga elementele
-     */
+
     public List<Movie> makeDummyMovies(){
         /* Declaram o lista de filme cu numele movies */
         List<Movie> movies = new ArrayList<Movie>();
 
-        /* TODO 2.2.1 Dorim sa cream instante pentru trei filme,
-         * pe care sa le adaugam ulterior in lista
-         * la apelarea construtorului, se dau ca parametrii
-         * stringurilor corespunzatoare */
         Movie film1 = new Movie("Harry Potter", "image_film_one",
                 "qwertyuiopqwertyuiop", "9.5", "10/03/2018");
 
@@ -88,9 +81,7 @@ public class ListActivity extends AppCompatActivity {
 
         Movie film3 = new Movie("Black Mirror", "image_film_three",
                 "zxcvbnmzxcvbnm", "5.3", "10/11/2016");
-        
-        /* TODO 2.2.2
-         * Adauga, pe rand, toate cele trei filme in lista */
+
         movies.add(film1);
         movies.add(film2);
         movies.add(film3);

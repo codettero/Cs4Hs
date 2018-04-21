@@ -41,7 +41,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
     
     @Override
-    public void onBindViewHolder(RecyclerViewAdapter.ViewHolder holder, int position) 
+    public void onBindViewHolder(RecyclerViewAdapter.ViewHolder holder, int position) {
         /* TODO 4 Ia referintele view-urilor si seteaza-le la ce doresti.
          * i) Obtine un film din lista mMovieList.
          *

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- TODO 1: Adaugati un ID (holder_poster_iv) acestui imageview
+care reprezinta posterul pentru filmul afisat intr-un ViewHolder-->
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true">
+
+</ImageView>
