@@ -34,9 +34,9 @@ public class DetailsActivity extends AppCompatActivity {
         Movie film3 = new Movie("Black Mirror", "image_film_three",
                 "zxcvbnmzxcvbnm", "5.3", "10/11/2016");
 
-        // TODO 3.1: Captam intent-ul trimis de ListActivity care contine filmul ce trebuie afisat
+        // TO DO 3.1: Captam intent-ul trimis de ListActivity care contine filmul ce trebuie afisat
         Intent intent = getIntent();
-        // TODO 3.2: Extragem filmul din intent folosind getParcelableExtra()
+        // TO DO 3.2: Extragem filmul din intent folosind getParcelableExtra()
         Movie movie = intent.getParcelableExtra("selectedMovie");
 
         int resID = getResources().getIdentifier(movie.getPosterPath(), "drawable", getPackageName());

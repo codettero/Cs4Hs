@@ -60,7 +60,7 @@ public class ListActivity extends AppCompatActivity {
          */
         recyclerViewAdapter = new RecyclerViewAdapter(this, dummyMovies);
 
-        
+
         /* TODO 8.4 Seteaza adapterul pentru recyclerViewAdapter
          * Acum avem un RecyclerView si un RecyclerViewAdapter, insa acestea nu comunica inca
          * intre ele. Trebuie sa ii spunem RecyclerView-ului nostru faptul ca adaptorul lui este

@@ -66,15 +66,22 @@ public class ListActivity extends AppCompatActivity implements RecyclerViewAdapt
     // selectat in urma click-ului.
     @Override
     public void onListItemClick(int clickedItemIndex) {
-        // TODO 2.1: Apelam getItem(index-ul elementului selectat) pentru a obtine filmul
-        // de la acel index
+        // TODO 2.1: Apelam getItem( care ia ca parametru index-ul elementului selectat) pentru
+        // a obtine filmul de la acel index. ATENTIE: getItem este o metoda care apartine clasei
+        // RecyclerViewAdapter. Este metoda implementata de voi la TO DO 1. Metoda
+        // trebuie apelata specificand ca ea este a obiectului de tip RecyclerViewAdapter
+        // cu care noi lucram in ListActivity.
 
 
         // TODO 2.2: Cream un intent care face legatura dintre activitatea curenta si
         // DetailsActivity.class
 
         // TODO 2.3: Folosind metoda putExtra(), transmitem filmul selectat de utilizator
-        // prin intent la activitatea Details
+        // prin intent la activitatea Details. Ne reamintim ca metoda putExtra() primeste
+        // ca parametrii un String care corespunde cheii de identificare, si obiectul (in
+        // cazul nostru de tip Movie) pe care noi vrem sa il trimitem la intent-ul urmator
+
+        // TODO 2.4: Nu uitati sa declansati activitatea pe care doriti sa o porniti!
 
     }
 }

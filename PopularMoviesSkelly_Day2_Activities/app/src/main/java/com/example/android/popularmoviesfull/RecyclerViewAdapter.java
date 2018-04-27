@@ -45,6 +45,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     // TODO 1: Cream o metoda getItem care ia ca parametru un numar intreg si returneaza
     // obiectul Movie de pe pozitia specificata in parametrii din lista de filme
+    // Va mai amintiti cum se obtinea un obiect dintr-o lista? HINT: onBindViewHolder.
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
