@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.popularmoviesfull">
 
-    <!-- TODO 0: Adaugare permisiune pentru acces la internet -->
+    <!-- TO DO 0: Adaugare permisiune pentru acces la internet -->
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application

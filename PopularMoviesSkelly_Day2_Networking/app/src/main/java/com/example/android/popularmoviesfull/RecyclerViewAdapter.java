@@ -61,8 +61,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             String IMAGE_URL_BASE = "http://image.tmdb.org/t/p/";
             String IMAGE_URL_SIZE = "w185/";
 
-            // TODO 3: Se adauga picasso in app.gradle adaugand la dependencies
-            // implementation 'com.squareup.picasso:picasso:2.5.2'
             Picasso.with(mContext)
                     .load(IMAGE_URL_BASE + IMAGE_URL_SIZE + posterPathParam)
                     .into(poster);

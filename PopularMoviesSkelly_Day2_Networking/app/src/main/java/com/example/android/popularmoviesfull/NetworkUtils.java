@@ -26,9 +26,9 @@ public class NetworkUtils {
 
         // TODO 1.1: Se initializeaza un String gol in care vom salva raspunsul la final
 
-        // TODO 1.2: Se initializeaza un obiect HTTPUrlConnection null
+        // TODO 1.2: Se initializeaza un obiect HTTPUrlConnection cu valoarea null
 
-        // TODO 1.3: Se initializeaza un obiect InputStream null
+        // TODO 1.3: Se initializeaza un obiect InputStream cu valoarea null
 
         try{
             // TODO 1.4: Se deschide conexiunea catre server apeland openConnection() pe obiectul
@@ -41,7 +41,8 @@ public class NetworkUtils {
 
             //Log.e(NetworkUtils.class.getName(),urlConnection.getResponseMessage());
 
-            // TODO 1.6: Se extrage input stream-ul din conexiunea http
+            // TODO 1.6: Se extrage input stream-ul din conexiunea http si se salveaza in
+            // obiectul de tip InputStream declarat mai sus si initializat cu null
 
             // TODO 1.7: Se apeleaza functia readFromStream() care primeste ca parametru inputStream-ul
             // din care sa citeasca. Se salveaza String-ul returnat de aceasta functie
@@ -90,6 +91,7 @@ public class NetworkUtils {
 
                     // TODO 2.5: Se verifica faptul ca JSONObjectul nostru contine
                     // in interiorul lui cheia "title" careia ii corespunde titlului filmului
+                    // HINT: Functia has() -- vezi linia 77
 
                         // TODO 2.6: Daca da, se extrage valoarea string-ului de la cheia title
                         // Acesta va fi titlul filmului din lista.
@@ -106,7 +108,7 @@ public class NetworkUtils {
                      */
 
                     // TODO 2.8: La lista creata mai sus, se adauga un nou obiect de tip Movie,
-                    // obiect care are ca titly, synopsys, rating, etc, valorile obtinute prin
+                    // obiect care are ca titlu, synopsys, rating, etc, valorile obtinute prin
                     // parsarea JSON-ului pe care tocmai ce am terminat-o
 
                 }

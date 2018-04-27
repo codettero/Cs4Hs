@@ -19,31 +19,32 @@ public class NetworkUtils {
 
     public static final String REQUEST_URL = "https://api.themoviedb.org/3/movie/popular?api_key=1a07e1d3e909a7a4d9a87cffb1b0726b";
 
-    // TODO 1: Se implementeaza getResponseFromHTTPUrl care va face conexiunea la server si
+    // TO DO 1: Se implementeaza getResponseFromHTTPUrl care va face conexiunea la server si
     // va returna intr-un string raspunsul server-ului la request
     public static String getResponseFromHTTPUrl(String stringUrl) throws IOException {
         URL url = new URL(stringUrl);
 
-        // TODO 1.1: Se initializeaza un String gol in care vom salva raspunsul la final
+        // TO DO 1.1: Se initializeaza un String gol in care vom salva raspunsul la final
         String jsonResponse = "";
-        // TODO 1.2: Se initializeaza un obiect HTTPUrlConnection null
+        // TO DO 1.2: Se initializeaza un obiect HTTPUrlConnection cu valoarea null
         HttpURLConnection urlConnection = null;
-        // TODO 1.3: Se initializeaza un obiect InputStream null
+        // TO DO 1.3: Se initializeaza un obiect InputStream cu valoarea null
         InputStream inputStream = null;
         try{
-            // TODO 1.4: Se deschide conexiunea catre server apeland openConnection() pe obiectul
+            // TO DO 1.4: Se deschide conexiunea catre server apeland openConnection() pe obiectul
             // URL de mai sus
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
             urlConnection.setConnectTimeout(15000);
             urlConnection.setReadTimeout(10000);
-            // TODO 1.5: Se efectueaza conexiunea propriu-zisa
+            // TO DO 1.5: Se efectueaza conexiunea propriu-zisa
             urlConnection.connect();
             //Log.e(NetworkUtils.class.getName(),urlConnection.getResponseMessage());
 
-            // TODO 1.6: Se extrage input stream-ul din conexiunea http
+            // TO DO 1.6: Se extrage input stream-ul din conexiunea http si se salveaza in
+            // obiectul de tip InputStream declarat mai sus si initializat cu null
             inputStream = urlConnection.getInputStream();
-            // TODO 1.7: Se apeleaza functia readFromStream() care primeste ca parametru inputStream-ul
+            // TO DO 1.7: Se apeleaza functia readFromStream() care primeste ca parametru inputStream-ul
             // din care sa citeasca. Se salveaza String-ul returnat de aceasta functie
             // in variabila definita ca sirul vid mai sus.
             jsonResponse = readFromStream(inputStream);
@@ -59,44 +60,45 @@ public class NetworkUtils {
             }
         }
 
-        // TODO 1.8: Se returneaza string-ul cu raspunsul JSON
+        // TO DO 1.8: Se returneaza string-ul cu raspunsul JSON
         return jsonResponse;
     }
 
-    // TODO 2: Se implementeaza functia parseMoviesJson() care ia ca parametru un String
+    // TO DO 2: Se implementeaza functia parseMoviesJson() care ia ca parametru un String
     // ce contine informatia JSON obtinuta de la server, String din care extrage o lista
     // de filme si o returneaza
     public static List<Movie> parseMoviesJSON(String string) throws JSONException {
         List<Movie> finalMovieList = new ArrayList<Movie>();
 
-        // TODO 2.1: Se extrage JSONObject-ul root din JSON-ul string primit ca parametru.
+        // TO DO 2.1: Se extrage JSONObject-ul root din JSON-ul string primit ca parametru.
         JSONObject result = new JSONObject(string);
 
         // Se verifica faptul ca JSONObjectul nostru root contine in interiorul lui cheia "results"
         if(result.has("results")){
-            // TODO 2.2: Se extrage JSONArray-ul care contine informatiile despre filme. Acest
+            // TO DO 2.2: Se extrage JSONArray-ul care contine informatiile despre filme. Acest
             // jsonArray are "results" ca si key
             JSONArray movieList = result.getJSONArray("results");
 
             if(movieList.length() != 0){
                 // Se parcurge tot jsonArray-ul ca sa luam informatii despre toate filmele
                 for(int i = 0; i < movieList.length(); i++){
-                    // TODO 2.3: Se extrage obiectul JSON ce contine informatii despre filmul
+                    // TO DO 2.3: Se extrage obiectul JSON ce contine informatii despre filmul
                     // de pe pozitia i din jsonArray
                     JSONObject movieJsonObject = movieList.getJSONObject(i);
 
-                    // TODO 2.4: Se initializeaza un string pentru titlul filmului cu sirul vid
+                    // TO DO 2.4: Se initializeaza un string pentru titlul filmului cu sirul vid
                     // sau "Unknown"
                     String movieTitle = "Unknown";
-                    // TODO 2.5: Se verifica faptul ca JSONObjectul nostru contine
+                    // TO DO 2.5: Se verifica faptul ca JSONObjectul nostru contine
                     // in interiorul lui cheia "title" careia ii corespunde titlului filmului
+                    // HINT: Functia has() -- vezi linia 77
                     if(movieJsonObject.has("title")){
-                        // TODO 2.6: Daca da, se extrage valoarea string-ului de la cheia title
+                        // TO DO 2.6: Daca da, se extrage valoarea string-ului de la cheia title
                         // Acesta va fi titlul filmului din lista.
                         movieTitle = movieJsonObject.getString("title");
                     }
 
-                    // TODO 2.7: Se repeta pasii 2.4-2.6 pentru fiecare pereche key - value care ne
+                    // TO DO 2.7: Se repeta pasii 2.4-2.6 pentru fiecare pereche key - value care ne
                     // intereseaza:
                     /*
                         link-ul pentru poster - key = "poster_path" - valoare de tip String
@@ -132,7 +134,7 @@ public class NetworkUtils {
                         }
                     }
 
-                    // TODO 2.8: La lista creata mai sus, se adauga un nou obiect de tip Movie,
+                    // TO DO 2.8: La lista creata mai sus, se adauga un nou obiect de tip Movie,
                     // obiect care are ca titly, synopsys, rating, etc, valorile obtinute prin
                     // parsarea JSON-ului pe care tocmai ce am terminat-o
                     finalMovieList.add(new Movie(movieTitle,
@@ -144,7 +146,7 @@ public class NetworkUtils {
             }
         }
 
-        // TODO 2.9: Se returneaza lista finala de filme.
+        // TO DO 2.9: Se returneaza lista finala de filme.
         return finalMovieList;
     }
 

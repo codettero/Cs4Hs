@@ -27,7 +27,7 @@ public class ListActivity extends AppCompatActivity implements RecyclerViewAdapt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        // TODO 4: Se elimina linia de cod pentru dummy movies. Nu mai avem nevoide de date
+        // TODO 3: Se elimina linia de cod pentru dummy movies. Nu mai avem nevoide de date
         // hardcodate daca folosim filmele primite de la server. De asemenea, stergeti si toata
         // functia makeDummyMovies() implementata mai jos.
         List<Movie> dummyMovies = makeDummyMovies();
@@ -39,7 +39,7 @@ public class ListActivity extends AppCompatActivity implements RecyclerViewAdapt
         recyclerViewAdapter = new RecyclerViewAdapter(getApplicationContext(), dummyMovies, ListActivity.this);
         recyclerView.setAdapter(recyclerViewAdapter);
 
-        // TODO 7: Se executa o noua instanta a AsyncTask-ului tocmai creat. Decomenteaza linia de mai jos
+        // TODO 6: Se executa o noua instanta a AsyncTask-ului tocmai creat. Decomenteaza linia de mai jos
         // new RequestMoviesTask().execute(NetworkUtils.REQUEST_URL);
     }
 
@@ -73,7 +73,7 @@ public class ListActivity extends AppCompatActivity implements RecyclerViewAdapt
         return movies;
     }
 
-    // TODO 5: Se completeaza clasa RequestMoviesTask. Aceasta primeste un string ca parametru
+    // TODO 4: Se completeaza clasa RequestMoviesTask. Aceasta primeste un string ca parametru
     // si dupa ce rularea pe background thread s-a terminat, ne returneaza o lista de Movies
     private class RequestMoviesTask extends AsyncTask<String, Void, List<Movie>> {
 
@@ -86,20 +86,20 @@ public class ListActivity extends AppCompatActivity implements RecyclerViewAdapt
             // lista de filme care va fi returnata la final
             List<Movie> movieList = new ArrayList<Movie>();
             try{
-                // TODO 5.1: Se apeleaza functia getResponseFromHTTPUrl(strings[0]) iar output-ul
+                // TODO 4.1: Se apeleaza functia getResponseFromHTTPUrl(strings[0]) iar output-ul
                 // se salveaza intr-un string. Acesta va fi string-ul ce contine JSON-ul cu date
-                // de la server
+                // de la server. ATENTIE: functia se gaseste in NetworkUtils. Acolo ati implementat-o!
 
-                // TODO 5.2: Se apeleaza functia parseMoviesJSON() careia ii dam ca parametru
+                // TODO 4.2: Se apeleaza functia parseMoviesJSON() careia ii dam ca parametru
                 // string-ul cu informatiile in format JSON. Output-ul il salvam intr-o lista de
-                // Movies (movieList)
+                // Movies (movieList). ATENTIE: functia se gaseste in NetworkUtils. Acolo ati implementat-o!
 
             } catch (IOException e){
                 Log.e(ListActivity.class.getName(), e.getMessage());
             } catch (JSONException e){
                 Log.e(ListActivity.class.getName(), e.getMessage());
             }
-            // TODO 5.3: Se returneaza lista de filme
+            // TODO 4.3: Se returneaza lista de filme
 
         }
 
@@ -110,7 +110,7 @@ public class ListActivity extends AppCompatActivity implements RecyclerViewAdapt
         protected void onPostExecute(List<Movie> movies) {
             super.onPostExecute(movies);
 
-            // TODO 6: Vrem ca Adapterul sa fie initializat cu lista de filme ce rezulta din
+            // TODO 5: Vrem ca Adapterul sa fie initializat cu lista de filme ce rezulta din
             // background thread. Astfel, cele doua linii de cod in care se facea initializarea
             // adapter-ului si asocierea lui cu recyclerview-ul vor trebui mutate aici.
 
