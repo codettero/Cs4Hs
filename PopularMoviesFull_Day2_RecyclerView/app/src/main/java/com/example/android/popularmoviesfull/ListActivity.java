@@ -15,13 +15,10 @@ import java.util.List;
  * cu adaugarea mai multor filme intr-o lista ce va fi afisata
  */
 public class ListActivity extends AppCompatActivity {
-    /* TODO 1
-     * i) Creeaza un membru intern(atribut) privat de tipul
-     * RecyclerView. Da-i numele recyclerView
-     * ii) Creeaza un membru intern(atribut) privat de tipul
-     * RecyclerViewAdapter. Da-i numele recyclerViewAdapter
+    /* TO DO 7
+     * TO DO 7.1 Declara o variabila membru privata de tipul RecyclerView cu numele mRecyclerView
+     * TO DO 7.2 Declara o variabila membru privata de tipul RecyclerViewAdapter cu numele mRecyclerViewAdapter*
      */
-     
     private RecyclerView recyclerView;
     private RecyclerViewAdapter recyclerViewAdapter;
     
@@ -37,24 +34,38 @@ public class ListActivity extends AppCompatActivity {
         /* Se ia content-ul activity_list, unde ne aflam */
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        
-        /* TODO 2.1 Creeaza o lista de filme
-         * i) Creeaza o lista folosind List<Movie>
-         * ii) Initializeaza aceasta lista cu valoarea
-         * returnata de metoda makeDummyMovies()
+
+        /* TO DO 8.1 Creeaza o lista de filme
+         * Vrem sa creem o lista de filme (tipul acesteia este List<Movie>) care sa se numeasca
+         * dummyMovies. O initializam cu valoarea returnata de functia makeDummyMovies().
+         * Daca explorati codul putin mai jos, veti gasi o functie numita makeDummyMovies care
+         * creeaza o lista noua de filme, apeleaza constructorul de cateva ori pentru a initializa
+         * niste filme, le adauga la lista si apoi returneaza lista
          */
         List<Movie> dummyMovies = makeDummyMovies();
         
-        /* TODO 2.2 Obtinem recyclerView-ul in functie de id-ul lui
+        /* TO DO 8.2 Obtinem recyclerView-ul in functie de id-ul lui
          * cu ajutorul functiei findViewById */
         recyclerView = findViewById(R.id.movie_list_rv);
+
+
         /* Seteaza layout manager-ul pentru recyclerView */
         recyclerView.setLayoutManager(new GridLayoutManager(this, calculateNoOfColumns(this)));
-        /* TODO 2.3 Instantiem un nou obiect de tipul RecyclerViewAdapter
-         * i) Numele variabilelei va fi recyclerViewAdapter
+
+        /* TODO 8.3 La TODO-ul 7.2 am declarat un RecyclerViewAdapter cu numele mRecyclerViewAdapter,
+         * dar acesta nu este initializat, deci momentan nu este nimic in el si nu functioneaza cum
+         * vrem noi. Acestui RecyclerViewAdapter vrem sa ii dam contextul curent si lista de filme
+         * cu care va popula recyclerview-ul. Facem acest lucru apeland constructorul, in aceeasi
+         * maniera in care apelam constructorul in DetailsActivity pentru a instantia noi filme
          */
         recyclerViewAdapter = new RecyclerViewAdapter(this, dummyMovies);
-        /* TODO 2.4 Seteaza adapt-erul pentru recyclerViewAdapter */
+
+        
+        /* TODO 8.4 Seteaza adapterul pentru recyclerViewAdapter
+         * Acum avem un RecyclerView si un RecyclerViewAdapter, insa acestea nu comunica inca
+         * intre ele. Trebuie sa ii spunem RecyclerView-ului nostru faptul ca adaptorul lui este
+         * acel mRecyclerViewAdapter creeat de noi. Va mai amintiti cum se facea asta?
+         * */
         recyclerView.setAdapter(recyclerViewAdapter);
     }
 
