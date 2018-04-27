@@ -6,17 +6,23 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.popularmoviesfull.DetailsActivity">
 
-    <!-- TODO 1 Vrem să adăugăm un id acestui LinearLayout -->
+    <!--
+    TO DO 1 Vrem să adăugăm id-ul "details" acestui LinearLayout
+    Hint: Avem mai sus un exemplu de cum i-am adăugat lui ScrollView id-ul "nc_view".
+    -->
     <LinearLayout
         android:id="@+id/details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- TODO 2 Adăugaţi un LinearLayout
-        i)  Creaţi un id pentru noul LinearLayout
-        ii) Setaţi orientarea ca fiind orizontală
-        iii)Setaţi lungimea şi înălţimea la fel ca layout-ul de mai sus -->
+        <!--TO DO 2 Dorim sa adăugăm un alt LinearLayout pentru sectiunea de poster + detalii principale-->
+        <!--TO DO 2.1. Acest LinearLayout nou adăugat va avea id-ul 'base_details'-->
+        <!--TO DO 2.2. Setați layout_width astfel încât să facă "match" cu lățimea "părintelui"
+            HINT: vezi mai sus utilizarea lui match_parent.-->
+        <!--TO DO 2.3. Setați layout_height astfel încât să fie cuprins întreg conținutul
+            HINT: vezi mai sus cum a fost folosit wrap_content-->
+        <!--TO DO 2.4. Setaţi orientarea ca fiind orizontală-->
 
         <LinearLayout
             android:id="@+id/base_details"
@@ -24,10 +30,12 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-
-            <!-- TODO 3
-            i) Adăugaţi un id imaginii
-            ii) Setaţi şi sursa imaginii -->
+            <!--TO DO 3 Completați atributele lui ImageView (corespunzator posterului)-->
+            <!--TO DO 3.1. Adăugaţi id-ul 'details_poster_iv' imaginii-->
+            <!--TO DO 3.2. Setaţi sursa imaginii
+                HINT:
+                    - atributul coresunzător este src
+                    - ne generăm Vector Assets în app.src.main.res.drawable -->
             <ImageView
                 android:id="@+id/details_poster_iv"
                 android:layout_width="0dp"
@@ -36,24 +44,36 @@
                 android:scaleType="centerCrop"
                 tools:src="@drawable/ic_launcher_background" />
 
-            <!-- TODO 4 Adăugaţi un id  -->
+            <!-- TO DO 4 Acest RelativeLayout corespunde portiunii de date principale ale filmului-->
+            <!-- TO DO 4.1. Setați id-ul 'title_rating_date' pentru acest RelativeLayout-->
             <RelativeLayout
                 android:id="@+id/title_rating_date"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-
-                <!-- TODO 4.1 Adăugaţi un TextView pentru titlu cu specificaţiile necesare: id, înălţime, lăţime -->
+                <!-- TO DO 4.2. Adăugaţi un TextView pentru titlu -->
+                <!-- TO DO 4.2.1. Setați drept id pentru acesta 'details_title_tv'-->
+                <!-- TO DO 4.2.2. Setați layout_width și layout_height la wrap_content -->
+                <!-- TO DO 4.2.3. Adăugați hint-ul "TITLE OF THE MOVIE"
+                        HINT: Atributul hint îl găsim în namespace-ul tools.
+                        Explicație namespace: tools este pentru hint ce este android pentru layout_width.
+                -->
                 <TextView
                     android:id="@+id/details_title_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:hint="TITLE OF THE MOVIE" />
 
-                <!-- TODO 4.2 Adăugaţi un ImageView cu specificaţiile necesare: id, sursă, înălţime, lăţime,
-                setaţi imaginea dedesuptul TextView-ului creat anterior(iconiţa e imaginea aferentă
-                raitingului)-->
+
+                <!-- TO DO 4.3. Adăugaţi un ImageView - iconiţa fiind imaginea aferentă raitingului-->
+                <!-- TO DO 4.3.1. Setați pentru acest ImageView id-ul 'details_rating_icon' -->
+                <!-- TO DO 4.3.2. Setați layout_width și layout_height la wrap_content -->
+                <!-- TO DO 4.3.3. Adăugați sursa imaginii. Nu uitați să vă generați Vector Asset-ul înainte de toate. -->
+                <!-- TO DO 4.3.4. Adăugați acest view dedesubtul TextView-ului anterior
+                        HINT: Atributul de utilizat este layout_below, iar acestuia,
+                              drept valoare, îi atribuim id-ul View-ului sub care vrem să așezăm acest View.
+                -->
                 <ImageView
                     android:id="@+id/details_rating_icon"
                     android:layout_width="wrap_content"
@@ -61,9 +81,14 @@
                     android:layout_below="@id/details_title_tv"
                     tools:src="@drawable/ic_star_black_24dp" />
 
-                <!-- TODO 4.3 Adăugaţi un TextView pentru detaliile raitingului cu specificaţiile necesare:
-                id, înălţime, lăţime,lăţime, setaţi imaginea dedesuptul TextView-ului creat anterior
-                şi la dreapta imaginii create anterior -->
+                <!-- TO DO 4.4. Adăugaţi un TextView pentru detaliile raitingului -->
+                <!-- TO DO 4.4.1. Setați id-ul 'details_rating_tv'-->
+                <!-- TO DO 4.4.2. Setați layout_width și layout_height la wrap_content -->
+                <!-- TO DO 4.4.3. Așezați acest view la dreapta celui creeat anterior
+                        HINT: Folosim atributul layout_toRightOf și ca valuare, id-ul layout-ului anterior,
+                              adică details_rating_icon.
+                -->
+                <!-- TO DO 4.4.4. Adăugați un atribut hint cu valoarea "5.6" de exemplu pentru acest view.-->
                 <TextView
                     android:id="@+id/details_rating_tv"
                     android:layout_width="wrap_content"
@@ -72,8 +97,14 @@
                     android:layout_below="@id/details_title_tv"
                     tools:hint="5.6" />
 
-                <!-- TODO 4.4 Adăugaţi un TextView pentru data apariţiei cu specificaţiile necesare: id, înălţime,
-                lăţime, textul sa fie în partea dreaptă jos a părintelui  -->
+                <!-- TO DO 4.5. Adăugaţi un TextView pentru data apariţiei -->
+                <!-- TO DO 4.5.1. Setați id-ul 'details_date_tv' -->
+                <!-- TO DO 4.5.2. Setați layout_width și layout_height să "wrap_content" -->
+                <!-- TO DO 4.5.3.  Așezați acest view în dreapta jos față de părinte.
+                        HINT: Pentru asta putem folosi layout_alignParentBottom și layout_alignParentRight,
+                              ambele setate la true.
+                -->
+                <!-- TO DO 4.5.4. Adăugați și un hint pentru dată. De exemplu "2018-05-02"-->
                 <TextView
                     android:id="@+id/details_date_tv"
                     android:layout_width="wrap_content"
@@ -84,23 +115,31 @@
 
             </RelativeLayout>
 
-
+        <!-- TO DO 2.5. Închideți tag-ul pentru LinearLayout-ul creeat ca parte a task-ului 2-->
         </LinearLayout>
 
-        <!-- TODO 5.1 Adăugaţi un TextView pentru labelul rezumatului cu specificaţiile necesare:
-        id, înălţime, lăţime, unde textul va fi preluat din containărul "string" -->
+        <!-- TO DO 5. Adăugaţi un TextView pentru labelul rezumatului -->
+        <!-- TO DO 5.1. Setați id-ul acestui TextView ca fiind 'details_synopsis_label' -->
+        <!-- TO DO 5.2. Setați layout_width și layout_height la wrap_content-->
+        <!-- TO DO 5.3. Setați atributul text la elementul din string cu id-ul 'activity_details_synopsis_label'
+                HINT: trebuie definit în string acest element cu id-ul activity_details_synopsis_label
+         -->
         <TextView
             android:id="@+id/details_synopsis_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/activity_details_synopsis_label" />
 
-        <!-- TODO 5.2 Adăugaţi un TextView pentru rezumatul propriu-zis cu specificaţiile necesare:
-        id, înălţime, lăţime -->
+        <!-- TO DO 6. Adăugaţi un TextView pentru rezumatul propriu-zis -->
+        <!-- TO DO 6.1. Setați id-ul la 'details_synopsis_tv'-->
+        <!-- TO DO 6.2. Setați width-ul să "match_parent" -->
+        <!-- TO DO 6.3. Setați height să "wrap_content" -->
+        <!-- TO DO 6.4. Adăugați drept hint, detaliile despre film, pe care le luăm din container-ul din string.-->
         <TextView
             android:id="@+id/details_synopsis_tv"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            tools:hint="@string/activity_details_synopsis"/>
 
     </LinearLayout>
 </ScrollView>

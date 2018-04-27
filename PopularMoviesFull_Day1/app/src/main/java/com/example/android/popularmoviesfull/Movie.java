@@ -6,10 +6,11 @@ package com.example.android.popularmoviesfull;
 
 public class Movie {
     /*
-     * TODO 1
-     * Definesteste variabilele membru ale acestei clase.
-     * Poti include toate detaliile din activity_details.xml
-     * Nume, calea poster-ului, descrierea, rating, data aparitiei.
+     * TO DO 1
+     * Definesteste variabilele membru ale acestei clase (vezi linia 15).
+     * Poti include toate elementele din activity_details.xml
+     * Titlu, calea poster-ului, descrierea, rating si data aparitiei, toate informatiile fiind
+     * de tip String.
      */
     private String mTitle;
     private String mPosterPath;
@@ -18,10 +19,10 @@ public class Movie {
     private String mReleaseDate;
 
     /*
-     * TODO 2
-     * Defineste constructorul acestei clase.
+     * TO DO 2
+     * Completeaza constructorul deja definit al acestei clase.
      * El primeste ca argumente variabile de care ai nevoie ca sa creezi obiectul tau.
-     * Valorile variabilelor sunt preluate de variabilele membru.
+     * Valorile parametrilor sunt preluate de variabilele membru (vezi linia 28).
      */
     public Movie(String title, String path, String synopsis, String rating, String releaseDate) {
         mTitle = title;
@@ -31,10 +32,11 @@ public class Movie {
         mReleaseDate = releaseDate;
     }
 
+
     /*
-     * TODO 3
+     * TO DO 3
      * Variabilele membru ale clasei sunt private.
-     * Pentru a le putea accesa valoarea, fa getteri pentru ele.
+     * Pentru a le putea accesa valoarea, faceti getteri pentru ele.(vezi linia 41)
      */
     public String getTitle() {
         return mTitle;

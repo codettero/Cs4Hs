@@ -64,6 +64,7 @@ public class Movie implements Parcelable{
         return mReleaseDate;
     }
 
+
     @Override
     public int describeContents() {
         return 0;

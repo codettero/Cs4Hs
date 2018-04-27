@@ -3,10 +3,13 @@
     <dimen name="details_title_text_size">24sp</dimen>
 
 
-    <!-- TODO 1 Adăugaţi o dimensiune nouă, pentru textul raitingului -->
+    <!-- TO DO 1 Adăugaţi o dimensiune nouă cu numele 'details_rating_text_size', și valoarea 20sp.
+            Aceasta va fi folosită pentru textul raitingului. -->
     <dimen name="details_rating_text_size">20sp</dimen>
-    <!-- TODO 2  Adăugaţi o dimensiune nouă, pentru labelul rezumatului -->
+    <!-- TO DO 2  Adăugaţi o dimensiune nouă cu numele 'details_label_text_size', și valoarea 20sp.
+            Aceasta va fi folosită pentru labelul rezumatului -->
     <dimen name="details_label_text_size">20sp</dimen>
-    <!-- TODO 3  Adăugaţi o dimensiune nouă, pentru textul rezumatului-->
+    <!-- TO DO 3  Adăugaţi o dimensiune nouă cu numele 'details_synopsis_text_size', și valoarea 16sp.
+            Aceasta va fi folosită pentru textul rezumatului -->
     <dimen name="details_synopsis_text_size">16sp</dimen>
 </resources>

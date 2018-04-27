@@ -19,8 +19,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!--TODO 2 Adăugaţi un LinearLayout-->
-        <!--TODO 2.1. Acest LinearLayout va avea id-ul 'base_details'-->
+        <!--TODO 2 Dorim sa adăugăm un alt LinearLayout pentru sectiunea de poster + detalii principale-->
+        <!--TODO 2.1. Acest LinearLayout nou adăugat va avea id-ul 'base_details'-->
         <!--TODO 2.2. Setați layout_width astfel încât să facă "match" cu lățimea "părintelui"
             HINT: vezi mai sus utilizarea lui match_parent.-->
         <!--TODO 2.3. Setați layout_height astfel încât să fie cuprins întreg conținutul
@@ -29,7 +29,7 @@
 
 
 
-            <!--TODO 3 Completați atributele lui ImageView prin rezolvarea TODO 3.1. și TODO 3.2.-->
+            <!--TODO 3 Completați atributele lui ImageView (corespunzator posterului)-->
             <!--TODO 3.1. Adăugaţi id-ul 'details_poster_iv' imaginii-->
             <!--TODO 3.2. Setaţi sursa imaginii
                 HINT:
@@ -42,7 +42,7 @@
                 android:scaleType="centerCrop"
                 />
 
-            <!-- TODO 4  -->
+            <!-- TODO 4 Acest RelativeLayout corespunde portiunii de date principale ale filmului-->
             <!-- TODO 4.1. Setați id-ul 'title_rating_date' pentru acest RelativeLayout-->
             <RelativeLayout
                 android:layout_width="0dp"
@@ -105,7 +105,7 @@
         <!-- TODO 6.1. Setați id-ul la 'details_synopsis_tv'-->
         <!-- TODO 6.2. Setați width-ul să "match_parent" -->
         <!-- TODO 6.3. Setați height să "wrap_content" -->
-        <!-- TODO 6.4. Adăugați drept text, detaliile despre film, pe care le luăm din container-ul din string.-->
+        <!-- TODO 6.4. Adăugați drept hint, detaliile despre film, pe care le luăm din container-ul din string.-->
 
 
     </LinearLayout>

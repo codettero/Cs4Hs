@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">PopularMoviesFull</string>
 
-    <!--TODO 5.3. b) Adăugaţi un string cu id-ul 'activity_details_synopsis_label' pentru detaliile despre film -->
+    <!--TODO 5.3. Adăugaţi un string cu numele 'activity_details_synopsis_label' pentru label-ul de la
+     detaliile despre film -->
 
-    <!--TODO 6.4. b) Adăugaţi un string cu id-ul 'activity_details_synopsis_label' pentru detaliile despre film -->
+    <!--TODO 6.4. Adăugaţi un string cu numele 'activity_details_synopsis' pentru detaliile despre film -->
 
 </resources>

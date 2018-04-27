@@ -42,7 +42,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
          *
          * ii) Obtine calea la fisier prin apelarea metodei getPosterPath din clasa movie,
          * pentru obiectele Movie.
-         * 
+         *
          */
 
 
